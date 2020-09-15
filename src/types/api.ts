@@ -6,6 +6,13 @@ export type TechIcon = {
   };
 };
 
+export type Module = {
+  title: string;
+  subtitle: string;
+  description: string;
+  id: number;
+};
+
 export type LogoProps = {
   alternativeText: string;
   url: string;
@@ -46,10 +53,16 @@ export type SectionConceptsProps = {
   }>;
 };
 
+export type SectionModulesProps = {
+  title: string;
+  modules: Module[];
+};
+
 export type LandingPageProps = {
   logo: LogoProps;
   header: HeaderProps;
   sectionAboutProject: SectionAboutProjectProps;
   sectionTech: SectionTechProps;
   sectionConcepts: SectionConceptsProps;
+  sectionModules: SectionModulesProps;
 };
