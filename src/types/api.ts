@@ -1,3 +1,11 @@
+export type TechIcon = {
+  title: string;
+  icon: {
+    url: string;
+    id: number;
+  };
+};
+
 export type LogoProps = {
   alternativeText: string;
   url: string;
@@ -25,8 +33,14 @@ export type SectionAboutProjectProps = {
   };
 };
 
+export type sectionTechProps = {
+  title: string;
+  techIcons: TechIcon[];
+};
+
 export type LandingPageProps = {
   logo: LogoProps;
   header: HeaderProps;
   sectionAboutProject: SectionAboutProjectProps;
+  sectionTech: sectionTechProps;
 };
