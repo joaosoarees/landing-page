@@ -33,14 +33,23 @@ export type SectionAboutProjectProps = {
   };
 };
 
-export type sectionTechProps = {
+export type SectionTechProps = {
   title: string;
   techIcons: TechIcon[];
+};
+
+export type SectionConceptsProps = {
+  title: string;
+  concepts: Array<{
+    title: string;
+    id: string;
+  }>;
 };
 
 export type LandingPageProps = {
   logo: LogoProps;
   header: HeaderProps;
   sectionAboutProject: SectionAboutProjectProps;
-  sectionTech: sectionTechProps;
+  sectionTech: SectionTechProps;
+  sectionConcepts: SectionConceptsProps;
 };

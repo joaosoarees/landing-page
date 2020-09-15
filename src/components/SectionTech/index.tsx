@@ -5,9 +5,9 @@ import Container from 'components/Container';
 
 import { getImageUrl } from 'utils/getImageUrl';
 import * as S from './styles';
-import { sectionTechProps } from 'types/api';
+import { SectionTechProps } from 'types/api';
 
-const SectionTech = ({ techIcons, title }: sectionTechProps) => (
+const SectionTech = ({ techIcons, title }: SectionTechProps) => (
   <S.Wrapper>
     <Container>
       <Heading reverseColor>{title}</Heading>
