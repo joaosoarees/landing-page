@@ -107,6 +107,27 @@ const GET_LANDING_PAGE = gql`
       }
     }
   }
+  fragment sectionReviews on LandingPage {
+    sectionReviews {
+      title
+      reviews {
+        name
+        text
+        photo {
+          url
+        }
+      }
+    }
+  }
+  fragment sectionFaq on LandingPage {
+    sectionFaq {
+      title
+      questions {
+        question
+        answer
+      }
+    }
+  }
 
   query GET_LANDING_PAGE {
     landingPage {
@@ -119,6 +140,8 @@ const GET_LANDING_PAGE = gql`
       ...sectionAgenda
       ...pricingBox
       ...sectionAboutUs
+      ...sectionReviews
+      ...sectionFaq
     }
   }
 `;

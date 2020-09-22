@@ -88,6 +88,27 @@ export type SectionAboutUsProps = {
   authors: Author[];
 };
 
+export type Review = {
+  name: string;
+  text: string;
+  photo: {
+    url: string;
+  };
+};
+
+export type sectionReviewsProps = {
+  title: string;
+  reviews: Review[];
+};
+
+export type sectionFaqProps = {
+  title: string;
+  questions: Array<{
+    question: string;
+    answer: string;
+  }>;
+};
+
 export type LandingPageProps = {
   logo: LogoProps;
   header: HeaderProps;
@@ -98,4 +119,6 @@ export type LandingPageProps = {
   sectionAgenda: SectionAgendaProps;
   princingBox: PrincingBoxProps;
   sectionAboutUs: SectionAboutUsProps;
+  sectionReviews: sectionReviewsProps;
+  sectionFaq: sectionFaqProps;
 };
